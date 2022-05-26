@@ -1,0 +1,211 @@
+//================ 
+.gallery {
+    min-height: 100vh;
+    margin-top: 45px;
+    @media (max-width:992px) {
+        height: auto;
+    }
+}
+.gallery__slide{
+    img{
+        max-width: 222px;
+        max-height: 213px;
+    }
+}
+//================ section "about"
+.about {
+    min-height: 100vh;
+    margin-top: 45px;
+    
+    &__image {
+        height: auto;
+        width: 100%;
+        max-width: 787px;
+        @media (max-width:992px) {
+            max-width: 500px;
+        }
+    }
+    @media (max-width:992px) {
+        height: auto;
+        &__content {
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+.about__text {
+display: flex;
+align-items: center;
+flex-direction: column;
+text-align: justify;
+max-width: 35%;
+line-height: 1.15em;
+position: relative;
+    p {
+        margin-bottom: 10px;
+    }
+    @media (max-width:992px){
+        max-width: 85%;
+        text-align:start;
+    }
+}
+
+.about__text::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 85%;
+    right: 58%;
+    width: 400px;
+    height: 400px;
+    background-image: url(../img/Maskvio.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+    @media (max-width:1200px) {
+    display: none;
+    }
+}
+
+.about__btn{
+    margin-top: 30px;
+}
+
+
+//================ section "offer"
+
+.offer {
+    min-height: 75vh;
+    margin-top: 45px;
+    @media (max-width:992px) {
+        &__content {
+            flex-direction: column;
+        }
+    }
+}
+
+.offer__content {
+   height: 70%;
+}
+
+.offer__text {
+    background-image: url(../img/textbg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 603px;
+    height: 328px;
+    line-height: 1.15em;
+    @media (max-width:1200px){
+        width: 470px; 
+    }
+    @media (max-width:992px){
+        display: none;
+    }
+} 
+
+.offer__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 30%;
+    padding-top: 25px;
+    @media (max-width:1200px){
+        max-width: 40%;
+        
+    }
+    @media (max-width:992px){
+        max-width: 60%;
+    }
+    @media (max-width:480px){
+        max-width: 100%;
+    }
+}
+
+.offer__form label{
+    width: 100%;
+}
+
+.offer__form input[type="text"],
+.offer__form input[type="tel"] {
+    display: block;
+    font-family: inherit; 
+    font-size: inherit; 
+    line-height: inherit; 
+    margin: 0; 
+    background-color: rgba(0, 0, 0, 0);
+    color: #ffffff;
+    width: 100%;
+}
+
+.offer__form input[type="text"]:focus-visible,
+.offer__form input[type="tel"]:focus-visible{
+    outline: 0;
+}
+
+.offer__btn:focus-within{
+    box-shadow: inset 0 0 20px rgb(255, 0, 0), 0 0 20px rgba(255, 0, 0, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388; 
+    transition:  0.2s ease;
+    transition-delay: 0.1s;
+}
+.offer__btn:focus-within::after{
+    transform: translate(-3px, -3px);
+}
+.offer__btn:focus-within::before{
+    transform: translate(3px, 3px);
+}
+
+.offer__form input[type="file"]:focus ~ label{
+    box-shadow: inset 0 0 20px rgb(255, 0, 0), 0 0 20px rgba(255, 0, 0, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388; 
+    transition:  0.2s ease;
+    transition-delay: 0.1s;
+}
+.offer__form input[type="file"]:focus ~ label::after
+{
+    transform: translate(-3px, -3px);
+}
+
+.offer__form input[type="file"]:focus ~ label::before
+{
+    transform: translate(3px, 3px);
+}
+
+::-webkit-input-placeholder {color:#ffffff; opacity:1;}/* webkit */
+::-moz-placeholder          {color:#ffffff; opacity:1;}/* Firefox 19+ */
+:-moz-placeholder           {color:#ffffff; opacity:1;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#ffffff; opacity:1;}/* IE */
+:focus::-webkit-input-placeholder { color: transparent, }/* webkit */
+:focus::-moz-placeholder { color: transparent }/* Firefox 19+ */
+:focus:-moz-placeholder { color: transparent }/* Firefox 18- */
+:focus:-ms-input-placeholder { color: transparent }/* IE */
+
+
+.offer__btn {
+    margin-bottom: 27px;
+    @media (max-width:1200px){
+        margin-bottom: 20px;
+        
+    }
+}
+
+.agreement {
+    font-size: 0.9rem;
+    color: #9F9F9F;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+.agreement > a {
+    color: rgba(255, 0, 234, 0.863);
+    text-decoration: underline;
+}
