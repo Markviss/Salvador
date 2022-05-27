@@ -64,24 +64,14 @@
 
 @media (max-width: 767px) {
 	.header__container {
-		margin-top: 25%;
+		margin-top: 10%;
 	}
-	.menu {
-		display: none;
-	}
+	// .menu {
+	// 	display: none;
+	// }
 }
 
-.menu {
-	text-align: right;
-	margin-bottom: 50px;
-	margin-top: 20px;
-	@media (max-height:830px) {
-	margin-top: 0;
-	}
-}
-.menu__list li+li{
-	margin-top: 5px;
-}
+
 .hero {
 	display: flex;
 	flex-direction: column;
@@ -134,7 +124,56 @@
 //====================================================================================================
 
 //Burger
-/*
+
+.menu {
+	
+	margin-bottom: 50px;
+	margin-top: 20px;
+	@media (max-width: $mobile) {
+		display: flex;
+		justify-content: end;
+	}
+
+	&__body {
+		@media (max-width: $mobile) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transform: translate(100%, 0);
+		background-color: rgb(0, 0, 0);
+		padding: 200px 30px 30px 30px;
+		transition: all 0.3s ease 0s;
+		z-index: 1;
+		overflow: auto;
+		}
+	}
+
+	&__body._active {
+		@media (max-width: $mobile) {
+		transform: translate(0, 0);
+		}
+	}
+
+	&__list {
+		text-align: right;
+		@media (max-width: $mobile) {
+			text-align: center;
+			@include adaptiv-font (55, 27);
+		}
+	}
+
+	&__list li+li{
+		margin-top: 5px;
+		@media (max-width: $mobile) {
+			margin-top: 50px;
+			}
+	}
+
+}
+
+
 .icon-menu {
 	display: none;
 	@media (max-width: $mobile) {
@@ -153,7 +192,7 @@
 			position: absolute;
 			width: 100%;
 			height: rem(2);
-			background-color: #000;
+			background-color: rgb(255, 255, 255);
 		}
 		&::before {
 			top: 0;
@@ -168,9 +207,6 @@
 			span {
 				width: 0;
 			}
-			&::before,
-			&::after {
-			}
 			&::before {
 				top: calc(50% - rem(1));
 				transform: rotate(-45deg);
@@ -182,4 +218,4 @@
 		}
 	}
 }
-*/
+

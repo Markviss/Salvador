@@ -16,6 +16,7 @@ export function pageNavigation() {
 	document.addEventListener("watcherCallback", pageNavigationAction);
 	// Основная функция
 	function pageNavigationAction(e) {
+		
 		if (e.type === "click") {
 			const targetElement = e.target;
 			if (targetElement.closest('[data-goto]')) {

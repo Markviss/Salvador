@@ -54,7 +54,7 @@ body::after {
 	border: 1px solid #FF0000;
 	padding: 20px;
 	width: 100%;
-	max-width: 900px;
+	max-width: 1000px;
 	border-radius: 20px;
 	.lock & {
 		visibility: visible;
@@ -103,13 +103,26 @@ body::after {
 	}
 	}
 
-.popup__card {
+.popup__cards{
+	display: flex;
+	@media (max-width: 767px) {
+		flex-direction: column;
+		align-items: center;
+	}
+	&-item {
 	display: flex;
 	flex-direction: column;
+	flex: 1 1;
 	align-items: center;
-	justify-content: center;
-	flex: 1 auto;
+	text-align: center;
+	margin: 10px 10px;
+	max-width: 50%;
 	img {
+		margin-bottom: 30px;
 		max-width: 100px;
+		@media (max-width:$mobileSmall){
+			max-width: 70px;
+		}
 	}
+}
 }

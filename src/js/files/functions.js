@@ -129,7 +129,7 @@ export let _slideToggle = (target, duration = 500) => {
 		return _slideUp(target, duration);
 	}
 }
-// Вспомогательные модули блокировки прокрутки и скочка ====================================================================================================================================================================================================================================================================================
+// Вспомогательные модули блокировки прокрутки и скачка ====================================================================================================================================================================================================================================================================================
 export let bodyLockStatus = true;
 export let bodyLockToggle = (delay = 500) => {
 	if (document.documentElement.classList.contains('lock')) {
@@ -407,23 +407,28 @@ export function tabs() {
 /*
 Сниппет (HTML): menu
 */
+ let menuBody = document.querySelector('.menu__body');
+
 export function menuInit() {
 	if (document.querySelector(".icon-menu")) {
 		document.addEventListener("click", function (e) {
-			if (bodyLockStatus && e.target.closest('.icon-menu')) {
-				bodyLockToggle();
-				document.documentElement.classList.toggle("menu-open");
-			}
+				if (bodyLockStatus && e.target.closest('.icon-menu')) {
+					bodyLockToggle();
+					document.documentElement.classList.toggle("menu-open");
+					menuBody.classList.toggle("_active");		
+				}
 		});
 	};
 }
 export function menuOpen() {
 	bodyLock();
 	document.documentElement.classList.add("menu-open");
+	menuBody.classList.add("_active");
 }
 export function menuClose() {
 	bodyUnlock();
 	document.documentElement.classList.remove("menu-open");
+	menuBody.classList.remove("_active");
 }
 // Модуль "показать еще" =======================================================================================================================================================================================================================
 /*

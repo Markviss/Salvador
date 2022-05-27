@@ -30,7 +30,7 @@ mvsFunctions.isWebp();
 /* Добавление loaded для HTML после полной загрузки страницы */
 // mvsFunctions.addLoadedClass();
 /* Модуль для работы с меню (Бургер) */
-// mvsFunctions.menuInit();
+ mvsFunctions.menuInit();
 /* Учет плавающей панели на мобильных устройствах при 100vh */
  mvsFunctions.fullVHfix();
 
@@ -143,7 +143,7 @@ import "./files/sliders.js";
 import * as mvsScroll from "./files/scroll/scroll.js";
 
 // Плавная навигация по странице
-// mvsScroll.pageNavigation();
+mvsScroll.pageNavigation();
 
 // Функционал добавления классов к хедеру при прокрутке
 // mvsScroll.headerScroll();
