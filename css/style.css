@@ -1360,9 +1360,9 @@ button.swiper-pagination-bullet {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
   }
 
   .menu__body {
